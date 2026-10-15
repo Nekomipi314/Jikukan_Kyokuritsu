@@ -1,0 +1,27 @@
+# --------------------------------------------------
+# 1. 検索エンジン（Google, Bing, Yahooなど）を一括で拒否
+# --------------------------------------------------
+User-agent: *
+Disallow: /
+
+# --------------------------------------------------
+# 2. 主要なAIの「ユーザー指示によるリアルタイム閲覧」を個別許可
+# --------------------------------------------------
+
+# ChatGPT (ユーザーがチャット欄にURLを貼った時の閲覧用)
+User-agent: ChatGPT-User
+Allow: /
+
+# Claude (ユーザーがチャット欄にURLを貼った時の閲覧用)
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Google系AIエージェント (Geminiのリアルタイム閲覧用)
+User-agent: Google-Agent
+Allow: /
+
+# Perplexity (ユーザーがURLを指定して検索・要約させる時用)
+User-agent: PerplexityBot
+Allow: /
